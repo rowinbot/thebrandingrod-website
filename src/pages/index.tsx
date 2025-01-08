@@ -8,6 +8,7 @@ import img from "../../public/img/header-me.jpeg";
 const sans = Poppins({
   variable: "--font-poppins-sans",
   weight: ["400", "500", "700"],
+  subsets: ["latin"]
 });
 
 const geistMono = Geist_Mono({
