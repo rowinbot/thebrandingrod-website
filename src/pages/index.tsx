@@ -12,6 +12,12 @@ import {
   AboutSectionDetail,
   AboutSectionMetric,
 } from "@/components/home/about-section";
+import { DayDrinkersLogo } from "@/assets/daydrinkers-logo";
+import { PhoenixLogo } from "@/assets/phoenix-logo";
+import { RowinLogo } from "@/assets/rowin-logo";
+import { TheMachoMythLogo } from "@/assets/the-macho-myth-logo";
+import { TheJobMobLogo } from "@/assets/the-job-mob-logo";
+import { RodrigoMonikaMonogram } from "@/assets/rodrigo-monika-monogram";
 
 function getDetailsAndMetrics() {
   const list: (AboutSectionMetricDefinition | AboutSectionDetailDefinition)[] =
@@ -41,7 +47,7 @@ export default function Home() {
   );
 
   return (
-    <AppLayout className="flex flex-col gap-8 items-center">
+    <AppLayout className="flex flex-col gap-20 items-center">
       <div
         className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-[20rem_1fr_20rem] gap-10 sm:gap-6"
         style={{
@@ -92,6 +98,19 @@ export default function Home() {
           }
         })}
       </div>
+
+      <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-x-4 gap-y-10 w-full place-items-center pb-14 border-b-2 border-black/30">
+        <h2 className="text-lg uppercase font-medium text-gray-400 text-center whitespace-pre-line xl:hidden sm:col-span-2">
+          {"Some of the brands I've worked\nwith and for"}
+        </h2>
+
+        <RodrigoMonikaMonogram className="fill-black/65 size-32" />
+        <TheMachoMythLogo className="fill-black/65 h-32" />
+        <RowinLogo className="fill-black/65 h-32" />
+        <PhoenixLogo className="fill-black/65 h-12 xl:hidden" />
+        <DayDrinkersLogo className="fill-black/65 h-24" />
+        <TheJobMobLogo className="fill-black/65 h-20" />
+      </section>
     </AppLayout>
   );
 }
