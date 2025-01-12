@@ -8,6 +8,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        serif: ["'Times'", "serif"],
+      },
     },
   },
   plugins: [],
