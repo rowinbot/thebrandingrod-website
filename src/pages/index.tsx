@@ -18,6 +18,7 @@ import { RowinLogo } from "@/assets/rowin-logo";
 import { TheMachoMythLogo } from "@/assets/the-macho-myth-logo";
 import { TheJobMobLogo } from "@/assets/the-job-mob-logo";
 import { RodrigoMonikaMonogram } from "@/assets/rodrigo-monika-monogram";
+import { ReachMeButton } from "@/components/reach-me-button";
 
 function getDetailsAndMetrics() {
   const list: (AboutSectionMetricDefinition | AboutSectionDetailDefinition)[] =
@@ -104,13 +105,15 @@ export default function Home() {
           {"Some of the brands I've worked\nwith and for"}
         </h2>
 
-        <RodrigoMonikaMonogram className="fill-black/65 size-32" />
-        <TheMachoMythLogo className="fill-black/65 h-32" />
-        <RowinLogo className="fill-black/65 h-32" />
-        <PhoenixLogo className="fill-black/65 h-12 xl:hidden" />
-        <DayDrinkersLogo className="fill-black/65 h-24" />
-        <TheJobMobLogo className="fill-black/65 h-20" />
+        <RodrigoMonikaMonogram className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 size-32" />
+        <TheMachoMythLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-32" />
+        <RowinLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-32" />
+        <PhoenixLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-12 xl:hidden" />
+        <DayDrinkersLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-24" />
+        <TheJobMobLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-20" />
       </section>
+
+      <ReachMeButton />
     </AppLayout>
   );
 }
