@@ -145,7 +145,7 @@ export default function Home() {
           </a>
         </h2>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-20">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-20 place-items-center">
           {instagramPosts.map((post) => (
             <InstagramPostButton key={post.label} post={post} />
           ))}
