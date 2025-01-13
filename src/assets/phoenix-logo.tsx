@@ -5,8 +5,10 @@ export function PhoenixLogo({ className }: { className?: string }) {
     <svg
       viewBox="0 0 461 127"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
       className={clsx("fill-black", className)}
     >
+      <title>Phoenix</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
