@@ -67,10 +67,10 @@ export default function Home() {
           }}
         >
           <div className="space-y-4">
-            <h1 className="text-6xl md:text-7xl font-medium">Rodrigo Flores</h1>
-            <p className="whitespace-pre-line font-serif text-4xl md:text-5xl leading-snug">
+            <p className="text-6xl md:text-7xl font-medium">Rodrigo Flores</p>
+            <h1 className="whitespace-pre-line font-serif text-4xl md:text-5xl leading-snug">
               {"Graphic Designer\nBased in Spain"}
-            </p>
+            </h1>
           </div>
 
           <Image
@@ -106,7 +106,7 @@ export default function Home() {
       </div>
 
       <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-x-4 gap-y-10 w-full place-items-center pb-20 border-b border-black/30">
-        <h2 className="text-lg uppercase font-medium text-gray-400 text-center whitespace-pre-line xl:hidden sm:col-span-2">
+        <h2 className="text-lg uppercase font-medium text-gray-400 text-center whitespace-pre-line xl:sr-only sm:col-span-2">
           {"Some of the brands I've worked\nwith and for"}
         </h2>
 
@@ -119,7 +119,7 @@ export default function Home() {
       </section>
 
       <section className="border-b border-black/30 self-stretch pb-20 flex flex-col items-center gap-20 text-center">
-        <h2 className="text-4xl">Education and experience</h2>
+        <h2 className="text-5xl">Education and experience</h2>
 
         <ul className="space-y-10">
           {educationAndExperienceSection.map((item, index) => (
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       <section className="space-y-16">
-        <h2 className="text-4xl text-center">
+        <h2 className="text-5xl text-center">
           <Icon
             icon="akar-icons:instagram"
             aria-hidden
