@@ -6,6 +6,7 @@ import {
   AboutSectionDetailDefinition,
   aboutSectionDetails,
   aboutSectionMetrics,
+  instagramPosts,
   type AboutSectionMetricDefinition,
 } from "@/content/home";
 import {
@@ -19,6 +20,8 @@ import { TheMachoMythLogo } from "@/assets/the-macho-myth-logo";
 import { TheJobMobLogo } from "@/assets/the-job-mob-logo";
 import { RodrigoMonikaMonogram } from "@/assets/rodrigo-monika-monogram";
 import { ReachMeButton } from "@/components/reach-me-button";
+import { Icon } from "@iconify-icon/react";
+import { InstagramPostButton } from "@/components/home/instagram-post-button";
 
 function getDetailsAndMetrics() {
   const list: (AboutSectionMetricDefinition | AboutSectionDetailDefinition)[] =
@@ -111,6 +114,31 @@ export default function Home() {
         <PhoenixLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-12 xl:hidden" />
         <DayDrinkersLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-24" />
         <TheJobMobLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-20" />
+      </section>
+
+      <section className="space-y-16">
+        <h2 className="text-3xl text-center">
+          <Icon
+            icon="akar-icons:instagram"
+            aria-hidden
+            className="align-middle mr-4 text-pink-700"
+          />
+
+          <a
+            href="https://www.instagram.com/branding.rod/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="sr-only">Posts my instagram</span>
+            <span>@branding.rod</span>
+          </a>
+        </h2>
+
+        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-16">
+          {instagramPosts.map((post) => (
+            <InstagramPostButton key={post.label} post={post} />
+          ))}
+        </ul>
       </section>
 
       <ReachMeButton />

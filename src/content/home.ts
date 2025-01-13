@@ -36,3 +36,26 @@ export const aboutSectionDetails: AboutSectionDetailDefinition[] = [
     services: ["Branding", "Logo Design", "UI/UX Design", "Web Design"],
   },
 ];
+
+export const instagramPosts = [
+  {
+    label: "Lucrative Endeavor",
+    image: "/img/ig/lucrative-endeavor.avif",
+    link: "https://www.instagram.com/share/_9FnVe_t1",
+  },
+  {
+    label: "Lu Lu's Surf",
+    image: "/img/ig/lulu-surf.avif",
+    link: "https://www.instagram.com/share/BAZgIyiqAU",
+  },
+  {
+    label: "Tek Crate",
+    image: "/img/ig/tek-crate.webp",
+    link: "https://www.instagram.com/share/BAaR6BOJch",
+  },
+  {
+    label: "Quinto",
+    image: "/img/ig/quinto.avif",
+    link: "https://www.instagram.com/share/_hEmN6qS6",
+  },
+];
