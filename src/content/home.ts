@@ -37,6 +37,21 @@ export const aboutSectionDetails: AboutSectionDetailDefinition[] = [
   },
 ];
 
+export const educationAndExperienceSection = [
+  {
+    title: "Associate of Science in Visual Communication",
+    address: "Los Angeles, CA, USA",
+  },
+  {
+    title: "Design Internship",
+    address: "Ontario, CA",
+  },
+  {
+    title: "Freelance Graphic Designer",
+    address: "Throughout the United States",
+  },
+];
+
 export const instagramPosts = [
   {
     label: "Lucrative Endeavor",

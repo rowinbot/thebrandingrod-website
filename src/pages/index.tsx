@@ -6,6 +6,7 @@ import {
   AboutSectionDetailDefinition,
   aboutSectionDetails,
   aboutSectionMetrics,
+  educationAndExperienceSection,
   instagramPosts,
   type AboutSectionMetricDefinition,
 } from "@/content/home";
@@ -104,7 +105,7 @@ export default function Home() {
         })}
       </div>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-x-4 gap-y-10 w-full place-items-center pb-14 border-b-2 border-black/30">
+      <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-x-4 gap-y-10 w-full place-items-center pb-20 border-b border-black/30">
         <h2 className="text-lg uppercase font-medium text-gray-400 text-center whitespace-pre-line xl:hidden sm:col-span-2">
           {"Some of the brands I've worked\nwith and for"}
         </h2>
@@ -117,8 +118,21 @@ export default function Home() {
         <TheJobMobLogo className="fill-black/65 hover:fill-black hover:scale-105 transition-all duration-150 h-20" />
       </section>
 
+      <section className="border-b border-black/30 self-stretch pb-20 flex flex-col items-center gap-20 text-center">
+        <h2 className="text-4xl">Education and experience</h2>
+
+        <ul className="space-y-10">
+          {educationAndExperienceSection.map((item, index) => (
+            <li key={index} className="flex flex-col gap-2">
+              <h3 className="text-3xl font-medium font-serif">{item.title}</h3>
+              <p className="text-base text-gray-500">{item.address}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="space-y-16">
-        <h2 className="text-3xl text-center">
+        <h2 className="text-4xl text-center">
           <Icon
             icon="akar-icons:instagram"
             aria-hidden
@@ -131,7 +145,7 @@ export default function Home() {
           </a>
         </h2>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-16">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-20">
           {instagramPosts.map((post) => (
             <InstagramPostButton key={post.label} post={post} />
           ))}
