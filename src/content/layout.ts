@@ -1,14 +1,16 @@
+import { me } from "./app";
+
 export const topBarNavButtons = [
   { label: "Home", link: "/" },
-  { label: "Book me", link: "https://calendly.com/thebrandingrod/30min" },
-  { label: "Email", link: "email:me@thebrandingrod.com" },
+  { label: "Book me", link: me.calendly },
+  { label: "Email", link: `email:${me.email}` },
 ];
 
 export const socialButtons = [
-  { icon: "hugeicons:dribbble", link: "https://dribbble.com/brandingrod" },
-  { icon: "uil:behance", link: "email:me@thebrandingrod.com" },
+  { icon: "hugeicons:dribbble", link: me.dribbble },
+  { icon: "uil:behance", link: me.behance },
   {
     icon: "hugeicons:instagram",
-    link: "https://www.instagram.com/branding.rod",
+    link: me.instagram,
   },
 ];

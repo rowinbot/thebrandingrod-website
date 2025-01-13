@@ -22,6 +22,7 @@ import { RodrigoMonikaMonogram } from "@/assets/rodrigo-monika-monogram";
 import { ReachMeButton } from "@/components/reach-me-button";
 import { Icon } from "@iconify-icon/react";
 import { InstagramPostButton } from "@/components/home/instagram-post-button";
+import { me } from "@/content/app";
 
 function getDetailsAndMetrics() {
   const list: (AboutSectionMetricDefinition | AboutSectionDetailDefinition)[] =
@@ -124,11 +125,7 @@ export default function Home() {
             className="align-middle mr-4 text-pink-700"
           />
 
-          <a
-            href="https://www.instagram.com/branding.rod/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={me.instagram} target="_blank" rel="noopener noreferrer">
             <span className="sr-only">Posts my instagram</span>
             <span>@branding.rod</span>
           </a>
@@ -141,7 +138,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <ReachMeButton />
+      <ReachMeButton link={me.calendly} />
     </AppLayout>
   );
 }

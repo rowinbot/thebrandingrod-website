@@ -1,9 +1,9 @@
 import { Icon } from "@iconify-icon/react";
 
-export function ReachMeButton() {
+export function ReachMeButton({ link }: { link: string }) {
   return (
     <a
-      href="https://calendly.com/thebrandingrod/30min"
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
       className="flex flex-col gap-2 aspect-square rounded-full bg-gray-50 items-center justify-center p-10 relative before:content-[''] before:absolute before:inset-0 before:rounded-full before:border-[5px] before:border-gray-400 before:border-dotted before:rotate-90 hover:before:rotate-[110deg] before:ease-in-out before:transition-all before:duration-500 text-center group"
