@@ -16,3 +16,7 @@ export function slugify(text: string) {
 export function getDate(year: number, month: number, day: number) {
   return new Date(Date.UTC(year, month - 1, day));
 }
+
+export function styleProp(styles: Record<string, string | number>) {
+  return styles as React.CSSProperties;
+}

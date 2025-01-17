@@ -1,11 +1,13 @@
 import { getDate, slugify } from "@/util/misc";
 import { ContentImage } from "./shared";
 
-import placeholderImage from "@/assets/projects/placeholder.avif";
+import rawlinsLawImage from "@/assets/projects/rawlins-law.jpg";
+import phoenixImage from "@/assets/projects/phoenix.jpg";
 
 export interface ProjectDefinition {
   id: string;
   title: string;
+
   image: ContentImage;
   client: {
     name: string;
@@ -36,7 +38,7 @@ export interface ProjectDefinition {
 const rawProjects: Omit<ProjectDefinition, "id">[] = [
   {
     title: "Lulu's Surfboards",
-    image: placeholderImage,
+    image: rawlinsLawImage,
     client: {
       name: "Lulu's Surfboards",
       location: "Santa Cruz, California, USA",
@@ -62,7 +64,7 @@ A lot of communication was needed in order to understand what the client wanted 
   },
   {
     title: "Phoenix Pools and Spas",
-    image: placeholderImage,
+    image: phoenixImage,
     client: {
       name: "Alex DeCamp and Eric Phoenix - Personal Branding",
       description: `
@@ -76,7 +78,7 @@ The goal of this project was to reinvent an existing logo with an innovative and
         role: "Graphic Designer",
       },
     ],
-    date: getDate(2017, 9, 24),
+    date: getDate(2014, 9, 24),
     services: ["Illustration", "Branding"],
     outcome: {
       description: `
@@ -87,7 +89,7 @@ Developed a personal brand to market a professional and respectable image. The f
   },
   {
     title: "Rawlin's Law",
-    image: placeholderImage,
+    image: rawlinsLawImage,
     client: {
       name: "Ashley Rawlins, Esq./ Ashley Rawlins APC",
       description: `

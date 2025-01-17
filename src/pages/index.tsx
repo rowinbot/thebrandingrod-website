@@ -24,6 +24,9 @@ import { ReachMeButton } from "@/components/reach-me-button";
 import { Icon } from "@iconify-icon/react";
 import { InstagramPostButton } from "@/components/home/instagram-post-button";
 import { me } from "@/content/app";
+import { Carrousel } from "@/components/carrousel/carrousel";
+import { ProjectCard } from "@/components/home/project-card";
+import { projects } from "@/content/projects";
 
 function getDetailsAndMetrics() {
   const list: (AboutSectionMetricDefinition | AboutSectionDetailDefinition)[] =
@@ -129,6 +132,14 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="space-y-16 border-b border-black/30 self-stretch pb-20 flex flex-col items-center">
+        <h2 className="text-5xl text-center">Previous Projects</h2>
+
+        <div className="max-w-4xl w-full">
+          <Carrousel SlideRenderer={ProjectCard} slides={projects} />
+        </div>
       </section>
 
       <section className="space-y-16">

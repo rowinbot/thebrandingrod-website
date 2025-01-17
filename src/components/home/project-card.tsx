@@ -1,24 +1,36 @@
 import { ProjectDefinition } from "@/content/projects";
+import { clsx } from "@/util/clsx";
 import Image from "next/image";
 import Link from "next/link";
 
-const cardSize = 400;
-
-export function ProjectCard({ project }: { project: ProjectDefinition }) {
+export function ProjectCard({
+  slide,
+  className,
+}: {
+  slide: ProjectDefinition;
+  className?: string;
+}) {
   return (
-    <Link href={`/projects/${project.id}`}>
+    <Link
+      href={`/projects/${slide.id}`}
+      className={clsx(
+        "flex select-none relative h-[30rem] bg-white",
+        className
+      )}
+    >
       <Image
-        src={project.image}
-        alt={project.title}
-        width={cardSize}
-        height={cardSize}
-      >
-        {project.title}
-      </Image>
+        src={slide.image}
+        alt={slide.title}
+        width={700}
+        height={500}
+        className="absolute w-full h-full inset-0 object-cover"
+      />
 
-      <p>{project.title}</p>
-
-      <p>{project.category}</p>
+      <div className="flex flex-col justify-between w-full text-center z-10 relative pt-8">
+        <p className="text-sm self-center lg:text-lg bg-white border border-black text-black px-3 py-1 rounded-full">
+          {slide.category}
+        </p>
+      </div>
     </Link>
   );
 }
